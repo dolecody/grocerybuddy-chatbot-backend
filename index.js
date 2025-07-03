@@ -48,6 +48,11 @@ Be friendly, concise, and clear. Use historical context from past conversations 
   }
 });
 
+// Health check endpoint (for Render and uptime probes)
+app.get('/', (req, res) => {
+  res.send('OK');
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
